@@ -1,0 +1,92 @@
+/************* HTML5 CSS3 & Media Queries ***************/ 
+
+	body{ font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif; color:#444444; }
+    
+    h1{ font-size: 3.5em; font-weight: normal; }
+    h2{ font-size: 2.4em; font-weight: normal; }
+    h3{ font-size: 1.4em; font-weight: normal; }
+    h4{ font-size: 1.1em; font-weight: normal; }
+	
+	a{color:#444444; text-decoration:none;} 
+	a:hover{color:#000000; text-decoration:underline;} 
+	.active{border-bottom:3px solid #e3e3e3; font-weight:bold;}  
+	
+	p{ margin-bottom:.7em; }
+
+/******************** Structure ************************/
+
+	#page-wrap{ margin: 0 auto; position: relative; width: 960px; }
+    header{ float: left; width: 100%; }     
+    article{ float: left; width: 67%; }
+    aside{ float: left; width: 33%; }   
+    footer{ float: left; width: 100%; }
+ 
+/*********************** Style ************************/
+    
+	nav li{ display:inline; margin-left:4em; } 
+	nav li:first-child{ margin-left:0em; }
+	
+	.entry{ padding: 1.2em; }
+	.description{ font-size:1em; }
+	.p-column{
+		-moz-column-count:3;
+		-moz-column-gap:1.2em;
+		-webkit-column-count:3;
+		-webkit-column-gap:1.2em;
+		column-count:3;
+		column-gap:1.2em
+    } 
+
+/********************** size 1024 *********************/
+
+	@media only screen and (max-width: 1024px) {
+        
+		body { 
+			background: lightblue; 
+		} 
+		
+		#page-wrap{ margin: 0 auto; width: 100%; }
+		
+	}
+
+/****************** Handheld Layout ******************/
+
+	@media handheld, only screen and (max-width: 767px) {
+
+		body {   		
+			background: green;
+		}
+		 
+		header{ width:auto; }
+		article{ width:auto; }
+		aside{ width:auto; }
+		nav li{ margin-left:1.4em; }
+
+	}
+
+	@media handheld, only screen and (max-width: 480px) {
+
+		body {            
+			background: orange;
+		} 
+		
+		.menu li{ margin-left:.5em; } 
+		
+		.p-column{
+			-moz-column-count:1;
+			-webkit-column-count:1;
+			column-count:1; 
+	   }
+		
+	}
+
+/********** Higher res assets for iPhone 4 ***********/  
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+	/*	.logo {
+			background: url(logo2x.jpg) no-repeat;
+			background-size: 212px 303px;
+		}*/
+
+	}
